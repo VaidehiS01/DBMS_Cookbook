@@ -10,11 +10,8 @@ create table RecipeIngredient (recipe_id INT NOT NULL, ingredient_id INT NOT NUL
 	ENGINE=InnoDB DEFAULT CHARSET=utf8; 
 
 INSERT INTO measure (name) VALUES('CUP'), ('TEASPOON'), ('TABLESPOON');
-
 INSERT INTO Ingredient (name) VALUES('egg'), ('salt'), ('sugar'), ('chocolate'), ('vanilla extract'), ('flour'),('Milk'),('Heavy whipping cream');
-
 INSERT INTO Recipe (name, description, instructions) VALUES('Vanilla Icecream', 'Classic Icecream', 'Cook the milk, cream, and sugar until the sugar has dissolved. Transfer the mixture to a measuring cup, then add the vanilla extract. Chill overnight. Pour the mix into an ice cream maker and churn according to the manufacturer's directions. Serve immediately or ripen in the freezer before serving.');
-
 INSERT INTO Recipe (name, description, instructions) VALUES('Chocolate Cake', 'Yummy cake', 'Add eggs, flour, chocolate to pan. Bake at 350 for 1 hour');
 
 INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount) VALUES (1, 7, 1, 2);
