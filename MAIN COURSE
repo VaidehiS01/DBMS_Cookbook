@@ -1,13 +1,8 @@
 create database MainCourse; 
-
 connect MainCourse; 
-	
 create table Recipe (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(25), description VARCHAR(50), instructions VARCHAR(500)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 create table Ingredient (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-
 create table Measure (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(30)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-
 create table RecipeIngredient (recipe_id INT NOT NULL, ingredient_id INT NOT NULL, measure_id INT, amount INT, 
 	CONSTRAINT fk_recipe FOREIGN KEY(recipe_id) REFERENCES Recipe(id), 
 	CONSTRAINT fk_ingredient FOREIGN KEY(ingredient_id) REFERENCES Ingredient(id), 
@@ -15,11 +10,8 @@ create table RecipeIngredient (recipe_id INT NOT NULL, ingredient_id INT NOT NUL
 	ENGINE=InnoDB DEFAULT CHARSET=utf8; 
 
 INSERT INTO measure (name) VALUES('CUP'), ('TEASPOON'), ('TABLESPOON');
-
 INSERT INTO Ingredient (name) VALUES('dosa batter'), ('salt'), ('oil'), ('pasta'), ('garlic'), ('parsley');
-
 INSERT INTO Recipe (name, description, instructions) VALUES('Dosa', 'Crispy Dosa', 'Heat a pan,Add a spoonful of batter and spread it in circles in one direction.Spread the dosa and then put the pan back on the stove.Turn and cook');
-
 INSERT INTO Recipe (name, description, instructions) VALUES('Aglio Olio', 'Spaghetti with garlic and oil', 'Boil pasta, Add the olive oil and garlic to a large cold sauté pan.Add the reserved pasta water and bring to a simmer. Add the cooked spaghetti and parsley, if using. Enjoy');
 
 INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount) VALUES (1, 1, 1, 2);
