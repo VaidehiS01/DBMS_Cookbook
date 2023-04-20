@@ -1,6 +1,6 @@
-create database Lunch; 
+create database MainCourse; 
 
-connect Lunch; 
+connect MainCourse; 
 	
 create table Recipe (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(25), description VARCHAR(50), instructions VARCHAR(500)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
