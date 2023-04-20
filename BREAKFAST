@@ -1,6 +1,6 @@
-create database Cookbook; 
+create database Breakfast; 
 
-connect Cookbook; 
+connect Breakfast; 
 	
 create table Recipe (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(25), description VARCHAR(50), instructions VARCHAR(500)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
